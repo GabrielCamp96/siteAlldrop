@@ -1,5 +1,5 @@
 @font-face {
-    src: url("webfonts/Lato-Regular.ttf");
+    src: url("../webfonts/Lato-Regular.ttf");
     font-family: Lato
 }
 
@@ -14,6 +14,10 @@
     }
   }
 
+.carousel {
+    top: 0;
+}
+
 html, body {
     height: 100%;
 }
@@ -24,12 +28,19 @@ body {
     background-color: #333;
 }
 
-.navbar-collapse {
-    height: fit-content;
-}
-
 .top-bar span {
     color: #00CC66;
+}
+
+nav {
+    position: sticky;
+}
+
+.carousel-item img {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 100%;
 }
 
 nav.stroke ul li a,

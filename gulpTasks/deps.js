@@ -8,11 +8,9 @@ gulp.task('deps', ['deps.js', 'deps.css', 'deps.fonts'])
 
 gulp.task('deps.js', () => {
     return gulp.src([
-        'node_modules/jquery/dist/jquery.js',
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
     ])
-        .pipe(babel({ presets:['env'] })) 
-        .pipe(uglify())
         .pipe(concat('deps.min.js'))
         .pipe(gulp.dest('build/js'))
 })
