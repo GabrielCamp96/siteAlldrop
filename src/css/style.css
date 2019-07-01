@@ -14,6 +14,18 @@
     }
 }
 
+@-webkit-keyframes lift{
+    0% {
+        width: 100%;
+        height: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 30%;
+    }
+}
+
 html, body {
     height: 100%;
     max-width: 100%;
@@ -29,6 +41,12 @@ body {
 
 #home, nav, .top-bar {
     overflow: hidden;
+}
+
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .top-bar .row {
@@ -58,10 +76,7 @@ body {
     .top-bar .row {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "telefone" 
-        "whatsapp" 
-        "email"
+        grid-template-areas: "telefone" "whatsapp" "email"
     }
 }
 
@@ -144,4 +159,119 @@ nav.fill ul li a:hover:after {
 
 hr {
     border-top: 2px solid #fe5c24;
+}
+
+#products .row .modal {
+    z-index: 1500;
+}
+
+#products .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    padding-bottom: 5px;
+}
+
+#products .portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    width: 100%;
+    display: none;
+    background-color: #fe5b24;
+}
+
+#products .portfolio-item .portfolio-link:hover .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: lift .4s forwards;
+}
+
+#products .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#products * {
+    z-index: 2;
+}
+
+.portfolio-item img {
+    height: 300px;
+    width: 100%;
+}
+
+@media (min-width: 767px) {
+    #products .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+.portfolio-modal .modal-dialog {
+    margin: 1rem;
+    max-width: 100vw;
+}
+
+.portfolio-modal .modal-content {
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+.portfolio-modal .modal-content h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px){
+    .portfolio-modal .modal-content h2 {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+}
+
+.portfolio-modal .modal-content p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    font-size: 16px;
+    font-style: italic;
+    margin: 20px 0 30px;
+    font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content button {
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: 0.3;
 }

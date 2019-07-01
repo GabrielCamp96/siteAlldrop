@@ -3,6 +3,8 @@ jQuery(function(){
     interval: 1000
     })
 
+    jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 1000  // 1 second
+
     $('body').scrollspy({
         target: '#mainNav'
     });
