@@ -44,15 +44,15 @@ body {
 }
 
 .carousel-inner .carousel-item {
-    transition: -webkit-transform 1s ease;
-    transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
 }
 
 .top-bar .row {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 8fr;
     grid-template-areas: "telefone whatsapp email"
 }
 
@@ -359,4 +359,37 @@ hr {
 
 .portfolio-modal .close-modal:hover {
     opacity: 0.3;
+}
+
+form {
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+form .btn {
+    background-color: #fe5b24;
+    color: white;
+}
+
+form .btn:hover {
+    background-color: #cc4b20;
+    color: white;
+}
+
+form .resultado label, form .resultado input {
+    color: #fe5b24;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }

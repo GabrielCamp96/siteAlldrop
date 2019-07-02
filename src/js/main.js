@@ -1,6 +1,6 @@
 jQuery(function(){
     $('.carousel').carousel({
-    interval: 1000
+    interval: 3000
     })
 
     jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 1000  // 1 second
@@ -35,5 +35,27 @@ jQuery(function(){
         const target = $(e.target).find('hr')
         const $hr = target
         $hr.css('border-top', '2px solid #fe5c24')        
+    })
+
+    $('form button.calculate').click( e => {
+        e.preventDefault()
+        const option = Number($('form input:radio:checked').val())
+        const v = Number($('form #input1').val())
+        const f = Number($('form #input2').val())
+        const q = Number($('form #input3').val())
+        const res = $('form #result')
+        const total = 0
+        // console.log(option, v, f, q, total, typeof option === 'number')
+        switch(option) {
+            case 1:
+                res.val((600 * v / (q * f)).toFixed(2) + ' L')
+                break
+            case 2:
+                res.val((v * f * q / 600).toFixed(2) + ' L/min')
+                break
+            case 3:
+                res.val((Math.pow(f * Math.sqrt(q) / v, 2).toFixed(2) + ' bar'))
+                break
+        }
     })
 })
