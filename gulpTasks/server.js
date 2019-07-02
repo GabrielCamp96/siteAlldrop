@@ -9,20 +9,20 @@ gulp.task('monitorarMudancas', () => {
     watch('src/**/*.js', () => gulp.start('app.js'))
     watch('src/img/**/*.*', () => gulp.start('app.imgs'))
     watch('src/fonts/**/*.*', () => gulp.start('app.fonts'))
-    // watch('src/**/*.*', () => browserSync.reload())
+    watch('src/**/*.*', () => browserSync.reload())
 })
 
 gulp.task('servidor', ['monitorarMudancas'], () => {
-    return gulp.src('build').pipe(webserver({
-        livereload: true,
-        open: true,
-        port: 3000
-    }))
+    // return gulp.src('build').pipe(webserver({
+    //     livereload: true,
+    //     open: true,
+    //     port: 3000
+    // }))
     
-    // browserSync.init({
-    //     server: {
-    //         baseDir:'./build'
-    //     }
-    // })
+    browserSync.init({
+        server: {
+            baseDir:'./build'
+        }
+    })
     
 })

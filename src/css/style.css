@@ -14,12 +14,11 @@
     }
 }
 
-@-webkit-keyframes lift{
+@-webkit-keyframes lift {
     0% {
         width: 100%;
         height: 0;
     }
-
     100% {
         width: 100%;
         height: 40%;
@@ -241,23 +240,19 @@ hr {
     bottom: 0;
 }
 
-.portfolio-modal .modal-content .row{
+.portfolio-modal .modal-content .row {
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 2fr 6fr;
-    grid-template-areas: "imagem produto produto"
-                         "cores cores caracteristicas"
+    grid-template-areas: "imagem produto produto" "cores cores caracteristicas"
 }
 
 @media (max-width: 1380px) {
-    .portfolio-modal .modal-content .row{
+    .portfolio-modal .modal-content .row {
         grid-template-rows: .5fr 1fr .5fr .2fr;
         grid-template-columns: 1fr 2fr;
-        grid-template-areas: "imagem produto"
-                             "cores cores"
-                             "caracteristicas caracteristicas"
-                             "botoes botoes"
-    }   
+        grid-template-areas: "imagem produto" "cores cores" "caracteristicas caracteristicas" "botoes botoes"
+    }
 }
 
 .portfolio-modal .modal-content .imagem img {
@@ -276,30 +271,21 @@ hr {
 @media (max-width: 768px) {
     .portfolio-modal .modal-dialog {
         max-width: 100vw;
-    } 
-
-    .portfolio-modal .modal-content .row{
+    }
+    .portfolio-modal .modal-content .row {
         grid-template-rows: .2fr .2fr 1fr .5fr .2fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "imagem"
-                             "produto"
-                             "cores"
-                             "caracteristicas"
-                             "botoes"
+        grid-template-areas: "imagem" "produto" "cores" "caracteristicas" "botoes"
     }
-    
     .portfolio-modal .modal-content .row .produto {
         margin-left: 2rem;
     }
-    
-    .portfolio-modal .modal-content .row .produto p:first-child{
+    .portfolio-modal .modal-content .row .produto p:first-child {
         font-size: 2rem;
     }
-    
-    .portfolio-modal .modal-content .row .imagem{
+    .portfolio-modal .modal-content .row .imagem {
         margin: 0 3rem;
     }
-    
     .portfolio-modal .modal-content .produto p:nth-child(2) {
         font-size: 1.2rem;
     }
@@ -324,19 +310,17 @@ hr {
     text-align: center;
 }
 
-.portfolio-modal .modal-content .caracteristicas .bg-primary{
+.portfolio-modal .modal-content .caracteristicas .bg-primary {
     border-radius: 5px;
     color: #fff;
     padding: 15px;
 }
 
-.portfolio-modal .modal-content .caracteristicas .bg-info{
+.portfolio-modal .modal-content .caracteristicas .bg-info {
     border-radius: 5px;
     color: #fff;
     padding: 15px;
 }
-
-
 
 .deactivated {
     background-color: #ddd !important;
@@ -383,13 +367,34 @@ form .resultado label, form .resultado input {
     font-weight: bold;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+@media(max-width: 768px) {
+    form .radio .radio1 {
+        grid-area: radio1
+    }
+    form .radio .radio2 {
+        grid-area: radio2
+    }
+    form .radio .radio3 {
+        grid-area: radio3
+    }
+    form .radio {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "radio1"
+                             "radio2"
+                             "radio3"
+    }
 }

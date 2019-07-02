@@ -37,6 +37,31 @@ jQuery(function(){
         $hr.css('border-top', '2px solid #fe5c24')        
     })
 
+    $('form input:radio').change(e => {
+        e.preventDefault()
+        const option = Number($('form input:radio:checked').val())
+        const label1 = $('label[for=input1]')
+        const label2 = $('label[for=input2]')
+        const label3 = $('label[for=input3]')
+        switch(option) {
+            case 1:
+                label1.html("Vazão do bico (L/min): ")
+                label2.html("Velocidade (km/h): ")
+                label3.html("Espaçamento entre bicos (cm): ")
+                break
+            case 2:
+                label1.html("Velocidade (km/h): ")
+                label2.html("Espaçamento entre bicos (cm): ")
+                label3.html("Volume por hectare (L/ha): ")
+                break
+            case 3:
+                label1.html("Vazão atual (L/min): ")
+                label2.html("Vazão desejada (L/min): ")
+                label3.html("Pressão atual (bar): ")
+                break
+        }
+    })
+
     $('form button.calculate').click( e => {
         e.preventDefault()
         const option = Number($('form input:radio:checked').val())
@@ -48,10 +73,10 @@ jQuery(function(){
         // console.log(option, v, f, q, total, typeof option === 'number')
         switch(option) {
             case 1:
-                res.val((600 * v / (q * f)).toFixed(2) + ' L')
+                res.val((600 * v / (q * (f/100))).toFixed(2) + ' L')
                 break
             case 2:
-                res.val((v * f * q / 600).toFixed(2) + ' L/min')
+                res.val((v * (f/100) * q / 600).toFixed(2) + ' L/min')
                 break
             case 3:
                 res.val((Math.pow(f * Math.sqrt(q) / v, 2).toFixed(2) + ' bar'))
