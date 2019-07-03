@@ -39,7 +39,7 @@
                         <a class="nav-link js-scroll-trigger" href="#aplication">Aplicação</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#participe">Contato</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -220,19 +220,22 @@
                     <div class="form-group row mt-3">
                         <label for="input1" class="col-sm-6 col-form-label">Vazão do bico (L/min): </label>
                         <div class="col-sm-6">
-                            <input type="number" min="0" step="0.1" class="form-control" id="input1" placeholder="Digite o valor aqui">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input1"
+                                placeholder="Digite o valor aqui">
                         </div>
                     </div>
                     <div class="form-group row mt-3">
                         <label for="input2" class="col-sm-6 col-form-label">Velocidade (km/h): </label>
                         <div class="col-sm-6">
-                            <input type="number" min="0" step="0.1" class="form-control" id="input2" placeholder="Digite o valor aqui">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input2"
+                                placeholder="Digite o valor aqui">
                         </div>
                     </div>
                     <div class="form-group row mt-3">
                         <label for="input3" class="col-sm-6 col-form-label">Espaçamento entre bicos (cm): </label>
                         <div class="col-sm-6">
-                            <input type="number" min="0" step="0.1" class="form-control" id="input3" placeholder="Digite o valor aqui">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input3"
+                                placeholder="Digite o valor aqui">
                         </div>
                     </div>
                     <button class="btn mb-2 px-5 mx-auto d-block calculate">Calcular</button>
@@ -246,10 +249,66 @@
                 </form>
             </div>
             <button class="btn bg-info text-white mb-2 mt-3 mx-auto d-block">
-                <i class="fas fa-info-circle mr-2"></i>Conheça nosso consultor virtual para saber qual bico utilizar em sua aplicação
+                <i class="fas fa-info-circle mr-2"></i>Conheça nosso consultor virtual para saber qual bico utilizar em
+                sua aplicação
             </button>
         </div>
     </section>
+    <section id="contact" class="bg-light my-0">
+        <div class="container">
+            <form id="contact" class="w-50 my-0 mx-auto" action="" method="post">
+                <h3>Entre em contato conosco</h3>
+                <h4>Preencha as informações abaixo</h4>
+                <fieldset>
+                    <input placeholder="Nome" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Endereço de Email" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Telefone (opcional)" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Web Site (opcional)" type="url" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Escreva sua mensagem aqui..." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <footer class="page-footer font-small bg-white">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left mt-3 pb-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Alldrop Indústria e Comércio LTDA</h6>
+                    <p>Indústria especializada em pontas e acessórios para pulverização.</p>
+                    <p class="text-danger"><strong>A Gota certa para sua aplicação</strong></p>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase font-weight-bold">Contato</h6>
+                    <p>
+                        <i class="fas fa-home"></i> Rua Roberto de Molina Cintra, 49 Osasco-SP</p>
+                    <p>
+                        <i class="fas fa-envelope"></i> alldrop@alldrop.com.br</p>
+                    <p>
+                        <i class="fas fa-phone"></i> + 55 (11) 4557-7907</p>
+                    <p>
+                        <i class="fab fa-whatsapp"></i> + 55 (11) 98932-2647</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row d-flex align-items-center">
+                    <p class="text-center text-md-left mx-auto">© 2019 Copyright:
+                            <strong> Alldrop Indústria e Comércio LTDA</strong>
+                    </p>
+            </div>
+        </div>
+    </footer>
 
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
