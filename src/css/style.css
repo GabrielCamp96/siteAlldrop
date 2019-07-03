@@ -1,0 +1,518 @@
+@font-face {
+    src: url("../webfonts/Lato-Regular.ttf");
+    font-family: 'Lato'
+}
+
+@-webkit-keyframes fill {
+    0% {
+        width: 0%;
+        height: 3px;
+    }
+    100% {
+        width: 100%;
+        height: 3px;
+    }
+}
+
+@-webkit-keyframes lift {
+    0% {
+        width: 100%;
+        height: 0;
+    }
+    100% {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+html, body {
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#home, nav, .top-bar {
+    overflow: hidden;
+}
+
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.top-bar .row {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 2fr 8fr;
+    grid-template-areas: "telefone whatsapp email"
+}
+
+.top-bar .row:nth-child(0) {
+    grid-area: telefone
+}
+
+.top-bar .row:nth-child(1) {
+    grid-area: whatsapp
+}
+
+.topbar .row:nth-child(2) {
+    grid-area: email
+}
+
+.top-bar span {
+    color: #00CC66;
+}
+
+@media (max-width: 480px) {
+    .top-bar .row {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "telefone" "whatsapp" "email"
+    }
+}
+
+.carousel-item .one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider1.jpg);
+}
+
+.carousel-item .two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider2.jpg);
+}
+
+.carousel-item .three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider3.jpg);
+}
+
+.carousel-item .one, .carousel-item .two, .carousel-item .three {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 100%;
+}
+
+nav.stroke ul li a, nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after, nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #00CC66;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 0.5s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill .5s forwards;
+    -webkit-animation: fill .5s forwards;
+    -moz-animation: fill .5s forwards;
+    opacity: 1;
+}
+
+.single_service_part {
+    text-align: center;
+    padding: 38px 20px 43px;
+    border: 1px solid #eaebed;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.single_service_part:hover {
+    background-color: #fe5c24;
+    color: #fff;
+}
+
+hr {
+    border-top: 2px solid #fe5c24;
+}
+
+#products .row .modal {
+    z-index: 1500;
+}
+
+#products .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    padding-bottom: 5px;
+}
+
+#products .portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    width: 100%;
+    display: none;
+    background-color: #fe5b24;
+}
+
+#products .portfolio-item .portfolio-link:hover .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: lift .4s forwards;
+}
+
+#products .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#products * {
+    z-index: 2;
+}
+
+.portfolio-item img {
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 767px) {
+    #products .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+.portfolio-modal .modal-dialog {
+    margin: 1rem auto;
+    max-width: 60vw;
+}
+
+.portfolio-modal .modal-content .row .imagem {
+    margin-bottom: 30px;
+    grid-area: imagem
+}
+
+.portfolio-modal .modal-content .row .produto {
+    grid-area: produto;
+}
+
+.portfolio-modal .modal-content .row .cores {
+    grid-area: cores;
+}
+
+.portfolio-modal .modal-content .row .caracteristicas {
+    grid-area: caracteristicas;
+}
+
+.portfolio-modal .modal-content .row .botoes {
+    grid-area: botoes;
+    bottom: 0;
+}
+
+.portfolio-modal .modal-content .row {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 6fr;
+    grid-template-areas: "imagem produto produto" "cores cores caracteristicas"
+}
+
+@media (max-width: 1380px) {
+    .portfolio-modal .modal-content .row {
+        grid-template-rows: .5fr 1fr .5fr .2fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "imagem produto" "cores cores" "caracteristicas caracteristicas" "botoes botoes"
+    }
+}
+
+.portfolio-modal .modal-content .imagem img {
+    width: auto;
+    height: 150px;
+}
+
+.portfolio-modal .modal-content .produto p:first-child {
+    font-size: 3rem;
+}
+
+.portfolio-modal .modal-content .produto p:nth-child(2) {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio-modal .modal-dialog {
+        max-width: 100vw;
+    }
+    .portfolio-modal .modal-content .row {
+        grid-template-rows: .2fr .2fr 1fr .5fr .2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "imagem" "produto" "cores" "caracteristicas" "botoes"
+    }
+    .portfolio-modal .modal-content .row .produto {
+        margin-left: 2rem;
+    }
+    .portfolio-modal .modal-content .row .produto p:first-child {
+        font-size: 2rem;
+    }
+    .portfolio-modal .modal-content .row .imagem {
+        margin: 0 3rem;
+    }
+    .portfolio-modal .modal-content .produto p:nth-child(2) {
+        font-size: 1.2rem;
+    }
+}
+
+.portfolio-modal .modal-content .cores {
+    max-width: 600px;
+}
+
+.portfolio-modal .modal-content .cores .vazao span {
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.portfolio-modal .modal-content .tipos .bg-primary, .aplicacao .bg-primary {
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+    margin: 0 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.portfolio-modal .modal-content .caracteristicas .bg-primary {
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+}
+
+.portfolio-modal .modal-content .caracteristicas .bg-info {
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+}
+
+.deactivated {
+    background-color: #ddd !important;
+}
+
+.portfolio-modal .modal-content {
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: 0.3;
+}
+
+form {
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+form .btn {
+    background-color: #fe5b24;
+    color: white;
+}
+
+form .btn:hover {
+    background-color: #cc4b20;
+    color: white;
+}
+
+form .resultado label, form .resultado input {
+    color: #fe5b24;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+@media(max-width: 768px) {
+    form .radio .radio1 {
+        grid-area: radio1
+    }
+    form .radio .radio2 {
+        grid-area: radio2
+    }
+    form .radio .radio3 {
+        grid-area: radio3
+    }
+    form .radio {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "radio1" "radio2" "radio3"
+    }
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+}
+
+@media (max-width: 480px) {
+    #contact {
+        min-width: 100%;
+    }
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}

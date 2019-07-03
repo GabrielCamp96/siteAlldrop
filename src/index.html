@@ -1,12 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/deps.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css" rel="stylesheet">
+    <title>Alldrop Indústria e Comércio de Bicos.</title>
 </head>
+
 <body>
-    
+    <div class="top-bar py-3 bg-light">
+        <div class="row">
+            <span class="ml-5"><i class="fas fa-phone"></i> +55 (11) 4557-7907</span>
+            <span class="ml-5"><i class="fab fa-whatsapp"></i> +55 (11) 98932-2647</span>
+            <span class="ml-5"><i class="fas fa-envelope"></i> alldrop@alldrop.com.br</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white text-right fill" id="mainNav">
+        <div class="container w-100">
+            <a class="navbar-brand js-scroll-trigger" href="#home">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">Quem somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#products">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#aplication">Aplicação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block one" alt="Primeiro Slide"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block two" alt="Segundo Slide"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block three" alt="Terceiro Slide"></div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </section>
+    <section id="about" class="bg-white">
+        <div class="container">
+            <div class="row align-items-center justify-content-around">
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single_service_part my-5">
+                        <i class="fas fa-calendar-alt fa-5x"></i>
+                        <hr />
+                        <h3>Anos de atuação nacional</h3>
+                        <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
+                            male moveth whose life rule she gathering seas of is sea night</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single_service_part my-5">
+                        <i class="fas fa-tint fa-5x"></i>
+                        <hr />
+                        <h3>Tecnologia para aplicação</h3>
+                        <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
+                            male moveth whose life rule she gathering seas of is sea night</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single_service_part my-5">
+                        <i class="fas fa-wallet fa-5x"></i>
+                        <hr />
+                        <h3>Preços competitivos</h3>
+                        <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
+                            male moveth whose life rule she gathering seas of is sea night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="bg-light">
+        <div class="container py-4">
+            <h1>Conheça nossos produtos!</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal1">
+                        <img class="d-block mx-auto" src="img/khcv.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KHCV</span>
+                            <span class="d-block">CONE VAZIO DE ALTA VAZÃO</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal2">
+                        <img class="d-block mx-auto" src="img/kfad.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KFAD</span>
+                            <span class="d-block">LEQUE PLANO ANTI DERIVA</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal3">
+                        <img class="d-block mx-auto" src="img/kdadd.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KDADD</span>
+                            <span class="d-block">DEFLETOR DUPLO ANTI DERIVA</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal4">
+                        <img class="d-block mx-auto" src="img/khccia.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KHCC-IA</span>
+                            <span class="d-block">CONE CHEIO COM INDUÇÃO DE AR</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal5">
+                        <img class="d-block mx-auto" src="img/kfd.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KFD</span>
+                            <span class="d-block">LEQUE DUPLO ANTI DERIVA</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal6">
+                        <img class="d-block mx-auto" src="img/khcc.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KHCC</span>
+                            <span class="d-block">CONE CHEIO DE ALTA VAZÃO</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal7">
+                        <img class=" d-block mx-auto" src="img/kfbd.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KFBD</span>
+                            <span class="d-block">LEQUE PLANO DE BAIXA DERIVA</span>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-md-3 col-sm-6 portfolio-item">
+                    <a class="shadow-sm portfolio-link bg-white" data-toggle="modal" href="#portfolioModal8">
+                        <img class="d-block mx-auto" src="img/kfadia.jpg" alt="">
+                        <div class="overlay text-center text-white">
+                            <span class="d-block h4">KFAD-IA</span>
+                            <span class="d-block">LEQUE PLANO ANTI DERIVA COM INDUÇÃO DE AR</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aplication" class="bg-white">
+        <div class="container py-4">
+            <h1>Saiba como utilizar nossos produtos</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form>
+                    <div class="row">
+                        <p class="mx-auto h3">Utilize nossa calculadora para uso agrícola</p>
+                    </div>
+                    <hr class="mt-0" />
+                    <p>Selecione a calculadora desejada:</p>
+                    <div class="row radio">
+                        <div class="form-check mx-3 radio1">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Volume L/ha
+                            </label>
+                        </div>
+                        <div class="form-check mx-3 radio2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Vazão L/min
+                            </label>
+                        </div>
+                        <div class="form-check mx-3 radio3">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="3">
+                            <label class="form-check-label" for="exampleRadios3">
+                                Ajuste pressão e vazão do bico
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group row mt-3">
+                        <label for="input1" class="col-sm-6 col-form-label">Vazão do bico (L/min): </label>
+                        <div class="col-sm-6">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input1"
+                                placeholder="Digite o valor aqui">
+                        </div>
+                    </div>
+                    <div class="form-group row mt-3">
+                        <label for="input2" class="col-sm-6 col-form-label">Velocidade (km/h): </label>
+                        <div class="col-sm-6">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input2"
+                                placeholder="Digite o valor aqui">
+                        </div>
+                    </div>
+                    <div class="form-group row mt-3">
+                        <label for="input3" class="col-sm-6 col-form-label">Espaçamento entre bicos (cm): </label>
+                        <div class="col-sm-6">
+                            <input type="number" min="0" step="0.1" class="form-control" id="input3"
+                                placeholder="Digite o valor aqui">
+                        </div>
+                    </div>
+                    <button class="btn mb-2 px-5 mx-auto d-block calculate">Calcular</button>
+                    <div class="form-group row resultado mb-0">
+                        <label for="result" class="col-sm-6 col-form-label">Resultado</label>
+                        <div class="col-sm-6">
+                            <input type="text" min="0" step="0.1" readonly class="form-control-plaintext" id="result"
+                                value="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button class="btn bg-info text-white mb-2 mt-3 mx-auto d-block">
+                <i class="fas fa-info-circle mr-2"></i>Conheça nosso consultor virtual para saber qual bico utilizar em
+                sua aplicação
+            </button>
+        </div>
+    </section>
+    <section id="contact" class="bg-light my-0">
+        <div class="container">
+            <form id="contact" class="w-50 my-0 mx-auto" action="" method="post">
+                <h3>Entre em contato conosco</h3>
+                <h4>Preencha as informações abaixo</h4>
+                <fieldset>
+                    <input placeholder="Nome" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Endereço de Email" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Telefone (opcional)" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Web Site (opcional)" type="url" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Escreva sua mensagem aqui..." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <footer class="page-footer font-small bg-white">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left mt-3 pb-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Alldrop Indústria e Comércio LTDA</h6>
+                    <p>Indústria especializada em pontas e acessórios para pulverização.</p>
+                    <p class="text-danger"><strong>A Gota certa para sua aplicação</strong></p>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase font-weight-bold">Contato</h6>
+                    <p>
+                        <i class="fas fa-home"></i> Rua Roberto de Molina Cintra, 49 Osasco-SP</p>
+                    <p>
+                        <i class="fas fa-envelope"></i> alldrop@alldrop.com.br</p>
+                    <p>
+                        <i class="fas fa-phone"></i> + 55 (11) 4557-7907</p>
+                    <p>
+                        <i class="fab fa-whatsapp"></i> + 55 (11) 98932-2647</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row d-flex align-items-center">
+                    <p class="text-center text-md-left mx-auto">© 2019 Copyright:
+                            <strong> Alldrop Indústria e Comércio LTDA</strong>
+                    </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <i class="fas fa-times fa-3x"></i>
+                </div>
+                <div class="row">
+                    <div class="ml-5 imagem">
+                        <img src="img/khcv.jpg" class="img-fluid">
+                    </div>
+                    <div class="text-left float-left produto">
+                        <p><strong>KHCV 80°</strong></p>
+                        <p>Disponivel com núcleo em <strong>Delrin</strong> ou <strong>Cerâmica</strong>.</p>
+                    </div>
+                    <div class="cores mx-5">
+                        <p class="text-left h4">Vazões disponíveis</p>
+                        <div class="d-flex vazao justify-content-start flex-wrap">
+                            <span class="m-1" style="background-color: orange;">0.10</span>
+                            <span class="m-1" style="background-color: green;">0.15</span>
+                            <span class="m-1" style="background-color: yellow;">0.20</span>
+                            <span class="m-1" style="background-color: fuchsia;">0.25</span>
+                            <span class="m-1" style="background-color: blue;">0.30</span>
+                            <span class="m-1" style="background-color: red;">0.40</span>
+                            <span class="m-1" style="background-color: brown;">0.50</span>
+                            <span class="m-1" style="background-color: gray;">0.60</span>
+                        </div>
+                        <div class="tipos">
+                            <p class="text-left h4 my-2">Tipo de produto:</p>
+                            <div class="d-flex justify-content-between flex-wrap">
+                                <div class="bg-primary deactivated my-1 mx-0">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                    <span class="d-block">Fertilizantes</span>
+                                </div>
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                    <span class="d-block">Herbicidas</span>
+                                </div>
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                    <span class="d-block">Fungicidas</span>
+                                </div>
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                    <span class="d-block">Inseticidas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aplicacao">
+                            <p class="text-left h4 my-2">Aplicações:</p>
+                            <div class="d-flex justify-content-between flex-wrap">
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-clock fa-2x"></i>
+                                    <span class="d-block">Barras</span>
+                                </div>
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-clock fa-2x"></i>
+                                    <span class="d-block">Faixa</span>
+                                </div>
+                                <div class="bg-primary my-1 mx-0">
+                                    <i class="fas fa-clock fa-2x"></i>
+                                    <span class="d-block">Costal</span>
+                                </div>
+                                <div class="bg-primary deactivated my-1 mx-0">
+                                    <i class="fas fa-clock fa-2x"></i>
+                                    <span class="d-block">Turbo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caracteristicas mt-3 mx-5">
+                        <div class="bg-primary px-0">
+                            <p class="h4">Pressão de trabalho recomendada:</p>
+                            <p class="h3">45 - 150 psi (3 - 10 bar)</p>
+                        </div>
+                        <div class="bg-info my-1 px-0 py-5">
+                            <p class="h3">Produz um jato de cone vazio de</p>
+                            <p class="h3">80° de pressão de 45psi (3 bar).</p>
+                        </div>
+                        <div class="botoes mt-5">
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-info-circle"></i> Saiba mais</button>
+                                <button class="btn btn-danger mx-2" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i> Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/deps.min.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
+
 </html>
