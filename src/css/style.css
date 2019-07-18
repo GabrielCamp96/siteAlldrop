@@ -82,6 +82,15 @@ body {
         grid-template-columns: 1fr;
         grid-template-areas: "telefone" "whatsapp" "email"
     }
+
+    nav a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    nav a img {
+        width: 100% !important;
+    }
 }
 
 .carousel-item .one {
